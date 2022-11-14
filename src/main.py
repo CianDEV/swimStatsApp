@@ -1,7 +1,8 @@
-from test_funcs.difference import time_improvement
+from test_funcs.difference import time_improvement, goals
 
 def main():
-    pass
+    
+    print(goals(29.26, 29.40))
 
 if __name__ == "__main__":
     main()

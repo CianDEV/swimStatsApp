@@ -1,8 +1,8 @@
-from test_funcs.difference import time_improvement, goals
+from test_funcs.difference import time_improvement, goals, weight
 
 def main():
     
-    print(goals(29.26, 29.40))
+    print(weight(32.5, 30))
 
 if __name__ == "__main__":
     main()

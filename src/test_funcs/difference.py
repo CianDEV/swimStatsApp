@@ -23,6 +23,11 @@ def time_improvement(old_time: float, new_time: float):
         return f"You were {round(final_diff, 2)}% from your best time!"
 
 def goals(goal_time, curr_time):
+
+    """
+    goal_time: Seconds\n
+    curr_time: Seconds
+    """
     
     percentage_diff = calc_diff(goal_time, curr_time)
     
@@ -35,3 +40,19 @@ def goals(goal_time, curr_time):
         if time_diff < 0:
             time_diff = time_diff * -1
         return f"You need to improve by {round(time_diff, 2)} seconds a {round(final_diff, 2)}% difference"
+
+def weight(goal_weight, curr_weight):
+    """
+    goal_weight: Weight in KG
+    curr_weight: Weight in KG
+    """
+    
+    percentage_improvement = calc_diff(goal_weight, curr_weight)
+
+    if percentage_improvement > 100:
+        final_diff = percentage_improvement - 100
+        return f"Your {round(final_diff, 2)}% worse than before"
+    
+    if percentage_improvement < 100:
+        final_diff = 100 - percentage_improvement
+        return f"Your {round(final_diff, 2)}% better than before"
